@@ -6,8 +6,8 @@ import { Button } from '../ui/button';
 export default function HomeLogin() {
   const [showPassword, setShowPasword] = useState<boolean>(false);
   return (
-    <div className="flex space-x-5">
-      <div className="relative flex-1">
+    <div className="flex space-x-5 flex-col sm:flex-row space-y-4">
+      <div className="relative sm:flex-1 w-full">
         <Input
           className="pl-10"
           type="text"
@@ -18,7 +18,7 @@ export default function HomeLogin() {
           size={18}
         />
       </div>
-      <div className="relative flex-1">
+      <div className="relative sm:flex-1 w-full">
         <Input
           className="pl-10"
           type={showPassword ? 'text' : 'password'}
