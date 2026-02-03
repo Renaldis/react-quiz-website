@@ -1,7 +1,7 @@
 import { Rocket } from 'lucide-react';
 import { Card, CardContent, CardFooter, CardHeader } from '../ui/card';
 
-import HomeLogin from './HomeLogin';
+import HomeLogin from './LoginForm';
 
 export default function HomeBanner() {
   return (

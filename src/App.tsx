@@ -1,6 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router';
-import Home from './pages/Home';
-import HomeLayout from './components/Home/HomeLayout';
+import Home from './pages/client/Home';
+import ProtectedRoute from './components/layout/ProtectedRoute';
+import LandingPageLayout from './components/layout/LandingPageLayout';
+import DashboardLayout from './components/layout/DashboardLayout';
+import DashboardHome from './pages/dashboard/Dashboard';
 
 function App() {
   return (
@@ -9,11 +12,16 @@ function App() {
         <Route
           path="/"
           element={
-            <HomeLayout>
+            <LandingPageLayout>
               <Home />
-            </HomeLayout>
+            </LandingPageLayout>
           }
         />
+        <Route element={<ProtectedRoute />}>
+          <Route path="/dashboard" element={<DashboardLayout />}>
+            <Route index element={<DashboardHome />} />
+          </Route>
+        </Route>
       </Routes>
     </Router>
   );

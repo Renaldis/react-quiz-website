@@ -1,5 +1,5 @@
-import HomeBanner from '@/components/Home/HomeBanner';
-import HomeCard from '@/components/Home/HomeCard';
+import HomeBanner from '@/components/Home/LandingPageBanner';
+import HomeCard from '@/components/Home/LandingPageCard';
 
 export default function Home() {
   return (
