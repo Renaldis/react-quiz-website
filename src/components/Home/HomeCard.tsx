@@ -36,7 +36,7 @@ export default function HomeCard() {
         <div className="w-25 rounded-full self-center mt-2 bg-linear-90 from-blue-300 to-blue-600 h-2" />
       </div>
       <div className="flex justify-center w-full">
-        <div className="grid grid-cols-3 mt-5 max-w-6xl space-x-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-5 w-full sm:max-w-6xl gap-4 ">
           {cardData.map((el: TypeCard, idx) => (
             <Card key={idx} className="gap-0 space-y-2">
               <CardHeader>

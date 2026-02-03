@@ -20,7 +20,7 @@ export default function HomeFooter() {
           </div>
 
           <div className="text-slate-500 text-xs">
-            © 2026 QuizMaster. All rights reserved.
+            © 2026 Quzzly by renaldis. All rights reserved.
           </div>
         </div>
       </div>
