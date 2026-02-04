@@ -4,10 +4,7 @@ import {
   LayoutDashboard,
   Gamepad2,
   History,
-  Trophy,
-  Settings,
   LogOut,
-  User as UserIcon,
   ChevronsUpDown,
   Sparkles,
 } from 'lucide-react';
@@ -54,16 +51,6 @@ const navItems = [
     title: 'History',
     url: '/dashboard/history',
     icon: History,
-  },
-  {
-    title: 'Leaderboard',
-    url: '/dashboard/leaderboard',
-    icon: Trophy,
-  },
-  {
-    title: 'Settings',
-    url: '/dashboard/settings',
-    icon: Settings,
   },
 ];
 
@@ -181,13 +168,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   </div>
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator className="bg-slate-800" />
-                <DropdownMenuItem
-                  className="gap-2 hover:bg-slate-800 focus:bg-slate-800 cursor-pointer"
-                  onClick={() => navigate('/dashboard/settings')}
-                >
-                  <UserIcon className="size-4" />
-                  Account Settings
-                </DropdownMenuItem>
+
                 <DropdownMenuSeparator className="bg-slate-800" />
                 <DropdownMenuItem
                   className="gap-2 text-red-500 hover:text-red-400 hover:bg-red-950/30 focus:bg-red-950/30 cursor-pointer"
@@ -202,7 +183,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarMenu>
       </SidebarFooter>
 
-      {/* Rail: Handle untuk resize sidebar */}
       <SidebarRail />
     </Sidebar>
   );
