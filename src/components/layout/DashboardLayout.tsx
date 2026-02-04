@@ -15,15 +15,19 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
 import { Fragment } from 'react';
+import { QuizResumeDialog } from '../QuizResumeDialog';
 
 export default function DashboardLayout() {
   const location = useLocation();
 
   const pathnames = location.pathname.split('/').filter((x) => x);
 
+  const isPageActiveQuiz = location.pathname.includes('/active');
+
   return (
     <SidebarProvider>
       <AppSidebar />
+      {!isPageActiveQuiz && <QuizResumeDialog />}
 
       <SidebarInset>
         <div className="flex items-center gap-2 px-4 mt-2">
